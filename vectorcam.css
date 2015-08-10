@@ -51,10 +51,31 @@ h1 a:hover {
   text-decoration: none;
 }
 
+.instructions {
+  text-align:center;
+  font-family: 'Raleway';
+  font-size: 28px;
+  width:100%;
+  position: absolute;
+  z-index: 5;
+  top: 40%;
+  color: white;
+}
+
+.spinner {
+  font-size: 36px;
+  position: absolute;
+  z-index: 4;
+  top: 45%;
+  color: #ccc;
+  text-align: center;
+  width: 100%;
+}
+
 .controls, .options {
   position: absolute;
   z-index: 2;
-  bottom: 10px;
+  bottom: 20px;
   width: 100%;
   text-align: center;
   padding: 0;

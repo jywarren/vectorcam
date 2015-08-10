@@ -39,6 +39,9 @@ VectorCam = Class({
 
     $("#file-select input").change(function() {
 
+      $('.spinner').show();
+      $('.instructions').hide();
+
       var reader = new FileReader(),
           f = this.files[0];
 
@@ -48,9 +51,23 @@ VectorCam = Class({
 
           _vectorcam.img = new Image();
   
-          _vectorcam.img.onload = function() {
+          _vectorcam.img.onload = function(e) {
 
-            _vectorcam.context.drawImage(_vectorcam.img, 0, 0);
+            var _img = e.path[0];
+
+            _vectorcam.imgWidth  = _img.width;
+            _vectorcam.imgHeight = _img.height;
+            _vectorcam.imgRatio  = _img.height/_img.width;
+
+            if (_img.width > 1000 || _img.height > 1000) {
+              _vectorcam.imgWidth = 1000;
+              _vectorcam.imgHeight = _vectorcam.imgWidth * _vectorcam.imgRatio;
+            }
+
+            _vectorcam.canvas.width = _vectorcam.imgWidth;
+            _vectorcam.canvas.height = _vectorcam.imgHeight;
+
+            _vectorcam.context.drawImage(_vectorcam.img, 0, 0, _vectorcam.canvas.width, _vectorcam.canvas.width * _vectorcam.imgRatio);
 
             _vectorcam.generate();
 
@@ -81,6 +98,7 @@ VectorCam = Class({
       $('.canvas').hide();
       $('.upload').hide();
       $('#svg').show();
+      $('.spinner').hide();
 
     }
 
@@ -89,6 +107,7 @@ VectorCam = Class({
     });
 
     $('.reload').click(function(e) {
+      $('.spinner').show();
       _vectorcam.options.numberofcolors = parseInt($('.colors').val());
       _vectorcam.options.pathomit = parseInt($('.pathomit').val());
       _vectorcam.generate();
