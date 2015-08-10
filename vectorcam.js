@@ -93,6 +93,7 @@ VectorCam = Class({
       _vectorcam.tracer.appendSVGString( svgstr, 'svg' );
 
       $('.save').attr('href',"data:image/svg+xml;utf8,"+$('#svg').html());
+      $('.save').attr('download',"vectorcam.svg");
       $('.save').show();
       $('.btn-options').show();
       $('.canvas').hide();
