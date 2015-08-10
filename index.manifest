@@ -1,0 +1,20 @@
+CACHE MANIFEST
+# v3 - 2015-8-10
+/index.html
+#/stylesheets/*
+/vectorcam.css
+/bower_components/raleway/webfonts/raleway_thin-webfont.eot
+/bower_components/raleway/webfonts/raleway_thin-webfont.woff
+/bower_components/raleway/webfonts/raleway_thin-webfont.ttf
+/bower_components/raleway/webfonts/raleway_thin-webfont.svg
+#/bootstrap/*
+/bower_components/bootstrap-css/js/bootstrap.min.js
+/bower_components/bootstrap-css/css/bootstrap.min.css
+#/fontawesome/*
+/bower_components/fontawesome/fonts/fontawesome-webfont.ttf?v=4.2.0
+/bower_components/fontawesome/fonts/fontawesome-webfont.woff?v=4.2.0
+/bower_components/fontawesome/css/font-awesome.min.css
+#/javascripts/*
+/bower_components/jquery/dist/jquery.min.js
+/bower_components/imagetracerjs/imagetracer_v1.0.0.js
+/vectorcam.js

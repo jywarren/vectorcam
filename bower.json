@@ -5,7 +5,6 @@
     "fontawesome":     "~4.2.0",
     "bootstrap-css":   "~3",
     "jquery":          "~2.1.3",
-    "getusermedia.js": "addyosmani/getUserMedia.js#v1.0rc2",
     "imagetracerjs":   "jywarren/imagetracerjs#v1.0.0",
     "raleway":         "theleagueof/raleway"
   }
