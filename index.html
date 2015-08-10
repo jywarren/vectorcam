@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<html lang="en" manifest="index.manifest">-->
+  <head>
+    
+    <title>VectorCam</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="bower_components/bootstrap-css/css/bootstrap.css" rel="stylesheet">
+    <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vectorcam.css" rel="stylesheet">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
+    <script src="bower_components/getusermedia.js/dist/getUserMedia.min.js"></script>
+    <script src="bower_components/imagetracerjs/imagetracer_v1.0.0.js"></script>
+    <script src="vectorcam.js"></script>
+
+  </head>
+
+  <body>
+
+    <canvas class="canvas"></canvas>
+
+    <h1><a href="https://github.com/jywarren/vectorcam">VectorCam</a></h1>
+
+    <div style="display:none;" class="options">
+      <div class="form-inline">
+        <label>
+          Omit paths of length &lt;  
+          <select class="form-control pathomit">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option selected=true>8</option>
+            <option>16</option>
+            <option>32</option>
+            <option>64</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-inline">
+        <label>
+          Colors 
+          <select class="form-control colors">
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>8</option>
+            <option selected=true>16</option>
+            <option>32</option>
+            <option>64</option>
+          </select>
+        </label>
+      </div>
+      <p><a class="btn btn-lg btn-inverse reload"><i class="fa fa-refresh"></i></a></p>
+    </div>
+
+    <div class="controls">
+      <span id="file-select" class="upload"><input type="file" /></span>
+      <a class="btn btn-lg btn-inverse upload"><i class="fa fa-upload"></i></a>
+      <!--<a class="btn btn-lg btn-inverse cut"><i class="fa fa-cut"></i></a>-->
+      <a style="display:none;" title="vectorcam.svg" class="btn btn-lg btn-inverse save" target="_blank"><i class="fa fa-save"></i></a>
+      <a style="display:none;" class="btn btn-lg btn-inverse btn-options"><i class="fa fa-cog"></i></a>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,106 @@
+/* 
+ * Raleway is an open source font available at 
+ * https://www.theleagueofmoveabletype.com/fanwood
+ */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('bower_components/raleway/webfonts/raleway_thin-webfont.eot');
+    src: url('bower_components/raleway/webfonts/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bower_components/raleway/webfonts/raleway_thin-webfont.woff') format('woff'),
+         url('bower_components/raleway/webfonts/raleway_thin-webfont.ttf') format('truetype'),
+         url('bower_components/raleway/webfonts/raleway_thin-webfont.svg#fanwood') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-size: 14px;
+  color: #fff;
+  background: #222;
+  padding: 7% 0 0;
+  text-align: center;
+}
+
+canvas.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+}
+
+h1 {
+  top: 10px;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+}
+
+h1 a {
+  font-family: 'Raleway';
+  color: white;
+  background: #222;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+h1 a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.controls, .options {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
+.options {
+  border-radius: 5px;
+  background: #444;
+  bottom: 100px;
+  padding: 10px;
+  margin: 10px 10px 10px 15%;
+  width: 70%;
+}
+
+.options .form-inline {
+  text-align: right;
+}
+
+.controls a,
+.options a {
+  color: white;
+  font-size: 24px;
+}
+
+.controls a:hover,
+.options a:hover {
+  color: #ccc;
+}
+
+.controls a.btn {
+  background: #444;
+}
+
+.options a.btn {
+  background: #222;
+}
+
+#file-select {
+  display:inline-block;
+}
+
+#file-select input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 55px;
+  height: 44px;
+  opacity: 0;
+}
