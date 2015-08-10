@@ -1,0 +1,14 @@
+{
+  "name": "imagetracerjs",
+  "homepage": "https://github.com/jywarren/imagetracerjs",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "ff8eef4fdb8ac82b32c1b9a471d6f4736222a18d"
+  },
+  "_source": "git://github.com/jywarren/imagetracerjs.git",
+  "_target": "v1.0.0",
+  "_originalSource": "jywarren/imagetracerjs"
+}

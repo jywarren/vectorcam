@@ -1,0 +1,13 @@
+{
+  "name": "raleway",
+  "homepage": "https://github.com/theleagueof/raleway",
+  "_release": "15dd22b0a1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "15dd22b0a1699bbfbd4faab8efc1f92d95b8322a"
+  },
+  "_source": "git://github.com/theleagueof/raleway.git",
+  "_target": "*",
+  "_originalSource": "theleagueof/raleway"
+}
