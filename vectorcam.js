@@ -52,13 +52,14 @@ VectorCam = Class({
 
       // Closure to capture the file information.
       reader.onload = (function(file) {
+
         return function(e) {
 
           _vectorcam.img = new Image();
   
           _vectorcam.img.onload = function(e) {
 
-            var _img = e.path[0];
+            var _img = this; //e.path[0];
 
             _vectorcam.imgWidth  = _img.width;
             _vectorcam.imgHeight = _img.height;
@@ -80,6 +81,7 @@ VectorCam = Class({
           _vectorcam.img.src = e.target.result;
 
         };
+
       })(f);
  
       // Read in the image file as a data URL.
