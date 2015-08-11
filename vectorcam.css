@@ -31,7 +31,7 @@ canvas.canvas {
 }
 
 #svg {
-  overflow: scroll;
+/* overflow: scroll; */
 }
 
 h1 {
