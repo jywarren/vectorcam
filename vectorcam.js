@@ -28,6 +28,11 @@ VectorCam = Class({
 
   initialize: function() {
 
+    if (typeof window.FileReaders == "undefined") {
+      $('.instructions').html('You need a newer browser (Firefox 38+, Safari 7.1+, Chrome 31+) to use this service.');
+      $('.upload').attr('disabled', true);
+    }
+
     this.tracer = new ImageTracer();
     
     this.canvas = $('canvas.canvas')[0]
