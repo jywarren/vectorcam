@@ -37,13 +37,13 @@ VectorCam = Class({
 
     var _vectorcam = this;
 
-    $("#file-select input").change(function() {
+    $("#file-select input").change(function(e) {
 
       $('.spinner').show();
       $('.instructions').hide();
 
       var reader = new FileReader(),
-          f = this.files[0];
+          f = e.target.files[0];
 
       // Closure to capture the file information.
       reader.onload = (function(file) {
@@ -93,7 +93,6 @@ VectorCam = Class({
       _vectorcam.tracer.appendSVGString( svgstr, 'svg' );
 
       $('.save').attr('href',"data:image/svg+xml;utf8,"+$('#svg').html());
-      $('.save').attr('download',"vectorcam.svg");
       $('.save').show();
       $('.btn-options').show();
       $('.canvas').hide();
@@ -114,6 +113,11 @@ VectorCam = Class({
       _vectorcam.generate();
     });
 
+    $('.save').click(function(e) {
+      var name = prompt('Name your image', 'vectorcam.svg');
+      $('.save').attr('download', name);
+    });
+
   },
 
   clear: function() {
@@ -124,3 +128,5 @@ VectorCam = Class({
   }
 
 });
+
+
