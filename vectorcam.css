@@ -30,6 +30,10 @@ canvas.canvas {
   height:100%;
 }
 
+#svg {
+  overflow: scroll;
+}
+
 h1 {
   top: 10px;
   width: 100%;
