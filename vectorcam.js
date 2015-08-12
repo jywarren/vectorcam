@@ -104,7 +104,9 @@ VectorCam = Class({
       $('.btn-options').show();
       $('.canvas').hide();
       $('.upload').hide();
-      $('#svg').show();
+      // don't actually show the svg; use it as a background:
+      $('#svg').hide();
+      $('body').css('background-image',"url('"+"data:image/svg+xml;utf8,"+$('#svg').html()+"')")
       $('.spinner').hide();
 
     }
@@ -131,7 +133,7 @@ VectorCam = Class({
     $('.canvas').show();
     $('.upload').show();
     $('.btn-options').hide();
-    $('#svg').hide();
+    // $('#svg').hide();
   }
 
 });

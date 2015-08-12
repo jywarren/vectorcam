@@ -20,6 +20,8 @@ body {
   background: #222;
   padding: 7% 0 0;
   text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 canvas.canvas {
